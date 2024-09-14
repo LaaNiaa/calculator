@@ -1,0 +1,63 @@
+body{
+    background-color: #333333;
+    font-family: monospace;
+    color: white;
+}
+
+.container {
+    background-color: black;
+    width: 300px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 35px;
+}
+
+.main{
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    bottom: 10%;
+}
+
+table {
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-spacing: 10px;
+}
+
+th {
+    background-color: #333333;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.output {
+    height: 80px;
+    font-size: 60px;
+    background-color: black;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.zerobutton {
+    text-align: left;
+    padding-left: 18px;
+}
+
+.rightbuttons {
+    background-color: #ff9f0a;
+}
+
+.top3buttons {
+    background-color: #a5a5a5;
+    color: black;
+}
