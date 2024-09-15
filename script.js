@@ -1,18 +1,23 @@
 function input(val) {
     let res = document.getElementById("result");
 
-    if (res.value.startsWith("0") && val === ',') {
-        res.value += val;
-    }
-    else if (res.value.startsWith("0,")) {
-        res.value += val;
-    }
-    else if (res.value.startsWith("0")) {
-        res.value = '';
-        res.value += val;
-    }
-    else {
-        res.value += val;
+    switch (true) {
+        case res.value.startsWith("0") && val === ',':
+            res.value += val;
+            break;
+        
+        case res.value.startsWith("0,"):
+            res.value += val;
+            break;
+        
+        case res.value.startsWith("0"):
+            res.value = '';
+            res.value += val;
+            break;
+        
+        default:
+            res.value += val;
+            break;
     }
 }
 
