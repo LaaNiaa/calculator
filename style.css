@@ -54,7 +54,7 @@ th {
     color: black;
 }
 
-#result {
+#display {
     background-color: black;
     border: none;
     outline: 0;
@@ -66,6 +66,6 @@ th {
     font-family: monospace;
 }
 
-.result {
+.display {
     background-color: black;
 }
