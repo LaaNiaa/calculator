@@ -55,6 +55,17 @@ function calculate() {
     else if (currentOperation === 'substract') {
         result = parseFloat(previousInput) - parseFloat(currentInput);
     }
+    else if (currentOperation === 'multiply') {
+        result = parseFloat(previousInput) * parseFloat(currentInput);
+    }
+    else if (currentOperation === 'divide') {
+        if (parseFloat(currentInput) !== 0) {
+            result = parseFloat(previousInput) / parseFloat(currentInput);
+        } else {
+            console.error("You can't divide by zero!");
+            result = "Error";
+        }
+    }
 
     console.log("result" + " " + result);
 
