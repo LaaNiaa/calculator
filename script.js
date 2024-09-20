@@ -8,13 +8,17 @@ var result = '';
 
 //buttons
 function input(number) {
-    currentInput += number;
-    console.log(currentInput);
+    if (!isNaN(number) || number === '.') {
+        currentInput += number;
+        console.log(currentInput);
+    } else {
+        console.error("Invalid value!");
+    }
 }
 
 //operators buttons
 function operator(operator) {
-    if (result === '') {
+    if (result === '' && previousInput === '') {
         previousInput = currentInput;
     }
     currentInput = '';
@@ -36,11 +40,12 @@ function clearCalculator() {
 
 //calculate
 function calculate() {
-    switch(true) {
-        case (currentOperation === ''):
-            result = currentInput;
-        case (currentInput === ''):
-            currentInput = previousInput;
+    if (currentOperation === '') {
+        result = currentInput;
+    }
+    
+    if (currentInput === '') {
+        currentInput = previousInput;
     }
 
     switch(true) {
