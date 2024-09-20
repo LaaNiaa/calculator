@@ -18,12 +18,17 @@ function input(number) {
 
 //operators buttons
 function operator(operator) {
+    currentOperation = operator;
+    
     if (result === '' && previousInput === '') {
         previousInput = currentInput;
     }
 
+    if (currentInput !== '' && operator === 'squareroot') {
+        calculate();
+    }
+
     currentInput = '';
-    currentOperation = operator;
 
     console.log("previous" + " " + previousInput);
     console.log("current" + " " + currentInput);
@@ -45,7 +50,7 @@ function calculate() {
         result = currentInput;
     }
     
-    if (currentInput === '') {
+    if (currentInput === '' && currentOperation !== 'squareroot') {
         currentInput = previousInput;
     }
 
@@ -65,6 +70,12 @@ function calculate() {
             console.error("You can't divide by zero!");
             result = "Error";
         }
+    }
+    else if (currentOperation === 'power') {
+        result = parseFloat(previousInput) ** parseFloat(currentInput);
+    }
+    else if (currentOperation === 'squareroot') {
+        result = Math.sqrt(previousInput);
     }
 
     console.log("result" + " " + result);
