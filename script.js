@@ -21,6 +21,7 @@ function operator(operator) {
     if (result === '' && previousInput === '') {
         previousInput = currentInput;
     }
+
     currentInput = '';
     currentOperation = operator;
 
@@ -48,10 +49,12 @@ function calculate() {
         currentInput = previousInput;
     }
 
-    switch(true) {
-        case currentOperation === 'add':
-                result = parseFloat(previousInput) + parseFloat(currentInput);
-        }
+    if (currentOperation === 'add') {
+        result = parseFloat(previousInput) + parseFloat(currentInput);
+    }
+    else if (currentOperation === 'substract') {
+        result = parseFloat(previousInput) - parseFloat(currentInput);
+    }
 
     console.log("result" + " " + result);
 
