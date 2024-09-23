@@ -38,6 +38,7 @@ th {
     height: 50px;
     border-radius: 25px;
     position: relative;
+    cursor: pointer;
 }
 
 .zerobutton {
